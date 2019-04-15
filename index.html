@@ -19,6 +19,7 @@
         black; } @else{ border:none; } } #box { width: 150px; height: 150px; background-color: red; @include border-stroke(medium); } @for $j from 1 through 6 { .text-#{$j}) { font-size:10px*$j; } } $colors: (color1: blue, color2: black, color3: red);
         @each $key, $color in $colors { .#{$color}-bg {background-color: $color;} } div { height: 200px; width: 200px; } $x: 1; @while $x
         <=1 0 { .text-#{$x} { font-size: 5px * $x;} $x: $x + 1; } </style>
+            h3{ text-align: center; } .info{ width: 200px; border: 1px solid black; margin: 0 auto; @extend .info-important; } .info-important{ background-color:magenta; }
 
 
 
@@ -54,6 +55,15 @@
     <div class="blue-bg"></div>
     <div class="black-bg"></div>
     <div class="red-bg"></div>
+
+    <h3>Posts</h3>
+    <div class="info-important">
+        <p>This is an important post. It should extend the class ".info" and have its own CSS styles.</p>
+    </div>
+
+    <div class="info">
+        <p>This is a simple post. It has basic styling and can be extended for other uses.</p>
+    </div>
 </body>
 
 </html>
